@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFest 2026 | Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>TechFest 2026</h1>
+      <p class="tagline">Two days of talks, workshops and student projects</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="register.html" class="active">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Register for TechFest</h2>
+      <p>Fields marked <strong>*</strong> are required. Your browser will check your answers when you press Submit.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label for="fullname">Full name *</label>
+          <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50">
+
+          <label for="email">Email address *</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Create a password * <small>(8–20 characters)</small></label>
+          <input type="password" id="password" name="password" required minlength="8" maxlength="20">
+
+          <label for="dob">Date of birth *</label>
+          <input type="date" id="dob" name="dob" required max="2026-11-01">
+
+          <label for="website">Personal website or portfolio</label>
+          <input type="url" id="website" name="website" placeholder="https://example.com">
+        </fieldset>
+
+        <fieldset>
+          <legend>Tickets &amp; Session Preferences</legend>
+
+          <label for="tickets">Number of tickets (1–4) *</label>
+          <input type="number" id="tickets" name="tickets" min="1" max="4" value="1" required>
+
+          <label for="start-time">Preferred workshop start time (09:00–17:00)</label>
+          <input type="time" id="start-time" name="start_time" min="09:00" max="17:00">
+
+          <label for="track">Main interest track</label>
+          <select id="track" name="track">
+            <option value="" disabled selected>Choose a track</option>
+            <optgroup label="Software">
+              <option value="web">Web Development</option>
+              <option value="ai">Artificial Intelligence</option>
+              <option value="data">Data Science</option>
+            </optgroup>
+            <optgroup label="Hardware &amp; Security">
+              <option value="robotics">Robotics</option>
+              <option value="cyber">Cybersecurity</option>
+            </optgroup>
+            <optgroup label="Creative">
+              <option value="design">UI/UX Design</option>
+            </optgroup>
+          </select>
+
+          <span class="field-title">Attendance type</span>
+          <div class="choices">
+            <label for="in-person"><input type="radio" id="in-person" name="attendance" value="in-person" checked>In person</label>
+            <label for="online"><input type="radio" id="online" name="attendance" value="online">Online</label>
+          </div>
+
+          <span class="field-title">Topics you want to hear about</span>
+          <div class="choices">
+            <label for="topic-html"><input type="checkbox" id="topic-html" name="topics" value="html-css" checked>HTML &amp; CSS</label>
+            <label for="topic-ai"><input type="checkbox" id="topic-ai" name="topics" value="ai">AI</label>
+            <label for="topic-robotics"><input type="checkbox" id="topic-robotics" name="topics" value="robotics">Robotics</label>
+            <label for="topic-careers"><input type="checkbox" id="topic-careers" name="topics" value="careers">Careers</label>
+          </div>
+
+          <label for="experience">Your experience level (1–10)</label>
+          <input type="range" id="experience" name="experience" min="1" max="10" value="5">
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras &amp; Submission</legend>
+
+          <label for="badge-colour">Name badge colour</label>
+          <input type="color" id="badge-colour" name="badge_colour" value="#3b4fd8">
+
+          <label for="student-file">Upload your student ID or CV (PDF, JPG, PNG)</label>
+          <input type="file" id="student-file" name="student_file" accept=".pdf,.jpg,.png">
+
+          <label for="reason">Why do you want to attend?</label>
+          <textarea id="reason" name="reason" rows="5" cols="40" maxlength="300" placeholder="Tell us in a few words why you want to join TechFest"></textarea>
+
+          <label for="event-id">Event ID</label>
+          <input type="text" id="event-id" name="event_id" value="TF2026" readonly>
+
+          <label for="earlybird">Early-bird discount code</label>
+          <input type="text" id="earlybird" name="earlybird" placeholder="Offer closed" disabled>
+          <p class="note">The early-bird offer has closed.</p>
+
+          <div class="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the terms and conditions *</label>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 TechFest &middot; <a href="mailto:hello@techfest.example">hello@techfest.example</a> &middot; <a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></p>
+    </div>
+  </footer>
+</body>
+</html>
